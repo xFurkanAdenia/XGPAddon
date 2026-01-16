@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.xfurkanadenia</groupId>
+    <artifactId>xgpaddon</artifactId>
+    <version>1.1.2-SNAPSHOT</version>
+    <packaging>jar</packaging>
+
+    <name>xgpaddon</name>
+
+    <properties>
+        <java.version>16</java.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
+    <build>
+        <defaultGoal>clean package</defaultGoal>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.13.0</version>
+                <configuration>
+                    <source>${java.version}</source>
+                    <target>${java.version}</target>
+                </configuration>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-shade-plugin</artifactId>
+                <version>3.5.3</version>
+                <executions>
+                    <execution>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>shade</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <relocations>
+                        <relocation>
+                            <pattern>fr.mrmicky.fastinv</pattern>
+                            <shadedPattern>com.notpatch.xGPAddon</shadedPattern>
+                        </relocation>
+                    </relocations>
+                </configuration>
+            </plugin>
+            <plugin>
+                <artifactId>maven-antrun-plugin</artifactId>
+                <version>1.8</version>
+                <executions>
+                    <execution>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>run</goal>
+                        </goals>
+                        <id>obfuscate</id>
+                        <configuration>
+                            <tasks>
+                                <property
+                                        name="project.jar"
+                                        value="${project.build.directory}/${project.build.finalName}.jar"/>
+                                <property
+                                        name="project.jar.unobf"
+                                        value="${project.build.directory}/${project.build.finalName}_unobf.jar"/>
+                                <move
+                                        file="${project.jar}"
+                                        tofile="${project.jar.unobf}"
+                                        verbose="true"/>
+
+                                <property
+                                        name="runtime_classpath"
+                                        refid="maven.runtime.classpath"/>
+                                <taskdef
+                                        name="yguard"
+                                        classname="com.yworks.yguard.YGuardTask"
+                                        classpath="${runtime_classpath}"/>
+                                <yguard>
+                                    <inoutpair in="${project.jar.unobf}" out="${project.jar}" />
+                                    <rename logfile="${project.build.directory}/${project.build.finalName}_renamelog.xml">
+                                        <keep>
+                                            <class name="com.xfurkanadenia.xGPAddon.XGPAddon" />
+                                        </keep>
+                                    </rename>
+                                </yguard>
+                            </tasks>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+                <filtering>true</filtering>
+            </resource>
+        </resources>
+    </build>
+
+    <repositories>
+        <repository>
+            <id>spigotmc-repo</id>
+            <url>https://hub.spigotmc.org/nexus/content/repositories/snapshots/</url>
+        </repository>
+        <repository>
+            <id>sonatype</id>
+            <url>https://oss.sonatype.org/content/groups/public/</url>
+        </repository>
+
+        <!-- JitPack -->
+        <repository>
+            <id>jitpack.io</id>
+            <url>https://jitpack.io</url>
+        </repository>
+
+        <!-- PlaceholderAPI -->
+        <repository>
+            <id>placeholderapi</id>
+            <url>https://repo.extendedclip.com/content/repositories/placeholderapi/</url>
+        </repository>
+
+        <!-- CombatLogX -->
+        <repository>
+            <id>sirblobman-public</id>
+            <url>https://nexus.sirblobman.xyz/public/</url>
+        </repository>
+    </repositories>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.spigotmc</groupId>
+            <artifactId>spigot-api</artifactId>
+            <version>1.21-R0.1-SNAPSHOT</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <!-- FastInv -->
+        <dependency>
+            <groupId>fr.mrmicky</groupId>
+            <artifactId>FastInv</artifactId>
+            <version>3.0.4</version>
+        </dependency>
+
+        <!-- Vault -->
+        <dependency>
+            <groupId>com.github.MilkBowl</groupId>
+            <artifactId>VaultAPI</artifactId>
+            <version>1.7</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <!-- GriefPrevention -->
+        <dependency>
+            <groupId>com.github.GriefPrevention</groupId>
+            <artifactId>GriefPrevention</artifactId>
+            <version>16.18.2</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <!-- PlaceholderAPI -->
+        <dependency>
+            <groupId>me.clip</groupId>
+            <artifactId>placeholderapi</artifactId>
+            <version>2.11.6</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <!-- yGuard -->
+        <dependency>
+            <groupId>com.yworks</groupId>
+            <artifactId>yguard</artifactId>
+            <version>4.1.1</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.yworks</groupId>
+            <artifactId>annotation</artifactId>
+            <version>4.1.1</version>
+        </dependency>
+
+        <!-- DeluxeCombat -->
+        <dependency>
+            <groupId>com.github.timderspieler</groupId>
+            <artifactId>DeluxeCombat-API</artifactId>
+            <version>1.5.1</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <!-- BlueSlimeCore -->
+        <dependency>
+            <groupId>com.github.sirblobman.api</groupId>
+            <artifactId>core</artifactId>
+            <version>2.9-SNAPSHOT</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <!-- CombatLogX API -->
+        <dependency>
+            <groupId>com.github.sirblobman.combatlogx</groupId>
+            <artifactId>api</artifactId>
+            <version>11.4-SNAPSHOT</version>
+            <scope>provided</scope>
+        </dependency>
+    </dependencies>
+</project>

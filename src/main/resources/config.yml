@@ -1,0 +1,61 @@
+# Available languages: en_US, tr_TR
+lang: en_US
+
+auto-save:
+  enabled: true
+  # Time in seconds
+  interval: 3600
+
+settings:
+  # If you are getting an error, you can enable the debug mode.
+  # This will help us to understand the error.
+  debug: false
+  # Every x second the plugin will check the claim time.
+  # If you have performance issues, you can increase this value.
+  claim-name-length-limit: 15
+  claim-default-name: "Claim-%player%"
+
+  claimUnclaimableRadius: 100
+
+  claim-check-time: 1
+  # Default claim time in days
+  defaultClaimTime: 30
+  # Claim time price per minute
+  claimTimePrice: 5
+  # Broadcast when claim explodes
+  broadcastClaimExplosion: true
+
+  # If you want to disable some settings, you can do it here.
+  # explosion, pvp, decay, entry, elytra, mobSpawning, fire
+  disabled-settings: []
+
+onPlayerBan: []
+
+
+
+
+limits:
+  #it doesn't require permission
+  default: 3
+  #vip: 5 # xgpaddon.limit.vip
+
+# Available placeholders for webhook: %player%, %claim_x%, %claim_y%, %claim_z%
+webhook:
+  enabled: false
+  username: ''
+  url: "https://discord.com/api/webhooks/........"
+  avatar-url: ''
+  content: ''
+  # HEX color, use # first
+
+  embeds:
+    '0':
+      title: Bir Claim patladı!
+      description: '%player% adlı oyuncunun claimi patladı!\n\n**X:** %claim_x%\n**Y:**
+        %claim_y%\n**Z:** %claim_z%'
+      color: '#FFFFFF'
+      fields:
+        '0':
+          name: Bu bir test alanıdır
+          value: Bu bir test değeridir
+          inline: true

@@ -1,0 +1,94 @@
+true: "<color:#66FF00>✔</color>"
+false: "<color:#FF0000>✘</color>"
+
+menu-title: '<color:#FFD700>Ana Menü</color>'
+
+claim-menu-title: '<color:#FFD700>Claim: %claim%</color>'
+
+title-claim-extend-time: '<color:#FFD700>Claim Süresini Uzat</color>'
+subtitle-claim-extend-time: '<color:#FFD700>İptal etmek için CANCEL yazın</color>'
+
+claim-extend-time-chat:
+  - ""
+  - "<color:#FFD700>Claim süresini uzatmak istediğiniz zamanı girin</color>"
+  - "<color:#FFD700>Bir dakika ücreti: %price%</color>"
+  - ""
+
+claim-extend-time-success: '<color:#66FF00>Claim süresi %time% dakika uzatıldı. Toplam süre: %claim_time%</color>'
+claim-extend-time-fail: '<color:#FF0000>Claim süresi uzatılamadı. Yeterli paranız yok.</color>'
+
+claim-explosion-announce: '<color:#FFD700>%player% adlı oyuncunun claimi patladı. | X: %claim_x% - Z: %claim_z% |</color>'
+
+invalid-number: '<color:#FF0000>Geçersiz sayı.</color>'
+
+config-reloaded: '<color:#66FF00>Yapılandırma yeniden yüklendi.</color>'
+
+ban-menu-ban-chat:
+  - ""
+  - "<color:#FFD700>Yasaklamak istediğiniz oyuncunun adını girin</color>"
+  - "<color:#FFD700>İptal etmek için CANCEL yazın</color>"
+  - ""
+
+trust-menu-trust-chat:
+  - ""
+  - "<color:#FFD700>Güvenmek istediğiniz oyuncunun adını girin</color>"
+  - "<color:#FFD700>İptal etmek için CANCEL yazın</color>"
+  - ""
+
+claim-inspect-chat:
+  - ""
+  - "<color:#FFD700>Claim Kalan Süre: %time%</color>"
+  - ""
+
+claim-rename-chat:
+  - ""
+  - "<color:#FFD700>Claim'in yeni adını girin</color>"
+  - "<color:#FFD700>İptal etmek için CANCEL yazın</color>"
+  - ""
+
+
+banned-from-claim: '<color:#FF0000>Bu claimden yasaklandınız.</color>'
+player-not-found: '<color:#FF0000>Oyuncu bulunamadı.</color>'
+player-is-owner: '<color:#FF0000>Bu claimin sahibisiniz.</color>'
+already-banned: '<color:#FF0000>Bu oyuncu zaten yasaklı.</color>'
+player-ban: '<color:#FF0000>%player% adlı oyuncu yasaklandı.</color>'
+player-unban: '<color:#66FF00>%player% adlı oyuncunun yasağı kaldırıldı.</color>'
+player-trust: '<color:#66FF00>%player% adlı oyuncuya güvenildi.</color>'
+player-already-trusted: '<color:#ff0000>%player% adlı oyuncu zaten güvenilir.</color>'
+
+pvp-disabled: "<color:#ff0000>Bu claimde PvP devre dışı!</color>"
+
+permission-block-break: "<color:#ff0000>Bu claimde blok kırma izniniz yok!</color>"
+permission-block-place: "<color:#ff0000>Bu claimde blok koyma izniniz yok!</color>"
+permission-open-chest: "<color:#ff0000>Bu claimde sandık açma izniniz yok!</color>"
+permission-spawner-break: "<color:#ff0000>Bu claimde spawner kırma izniniz yok!</color>"
+permission-open-door: "<color:#ff0000>Bu claimde kapı açma izniniz yok!</color>"
+permission-open-trap-door: "<color:#ff0000>Bu claimde tuzak kapısı açma izniniz yok!</color>"
+
+no-claim-limit: "<color:#ff0000>Claim oluşturmak için yeterli limitiniz yok!</color>"
+cant-claim-nearby: "<color:#ff0000>Buraya claim açamazsınız, çünkü %radius% blok yakınında başka bir claim var.</color>"
+
+unowned-claim: "Sahipsiz"
+unowned-claim-owner: ""
+unowned-claim-time: ""
+
+claim-exit-title: "%claim_name%"
+claim-exit-subtitle: "<color:#FF0000>PvP etkin, dikkatli ol!</color>"
+
+claim-enter-pvp-enabled-title: "<color:#FFFFFF>%claim_name%</color>"
+claim-enter-pvp-enabled-subtitle: "<color:#FF0000>PvP etkin, dikkatli ol!</color>"
+
+claim-enter-pvp-disabled-title: "%claim_name%"
+claim-enter-pvp-disabled-subtitle: "<color:#66ff00>PvP devre dışı, güvendesin!</color>"
+
+cant-enter-while-pvp: "<color:#FF0000>PvP sırasında claim'e giremezsiniz</color>"
+cant-damage-in-pvp-disabled-claim: "<color:#FF0000>PvP kapalı olan claim'de oyunculara hasar veremezsiniz!</color>"
+
+length-limit-exceeded: "<color:#FF0000>Claim adı en fazla %maxlength% karakter uzunluğunda olabilir.</color>"
+
+cant-use-setting-when-occupied: "<color:#FF0000>Claim içinde oyuncu bulunurken bu ayarı değiştiremezsiniz!</color>"
+
+days: Gün
+minutes: Dakika
+hours: Saat
+seconds: Saniye

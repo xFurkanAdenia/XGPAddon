@@ -1,0 +1,55 @@
+
+### Types ###
+# next_page
+# previous_page
+# bannedPlayers
+
+
+title: "&cBan Listesi - Sayfa %page%"
+size: 54
+
+
+items:
+  filler:
+    material: WHITE_STAINED_GLASS_PANE
+    displayName: "&r"
+    slots: [0,1,2,3,4,5,6,7,8,9,17,18,26,27,35,36,44,45,46,47,48,50,51,52,53]
+    customModelData: 0
+
+  close:
+    material: BARRIER
+    displayName: "&cKapat"
+    slot: 49
+
+  previous_page:
+    type: previous_page
+    material: ARROW
+    displayName: "&aÖnceki Sayfa"
+    slot: 45
+
+  next_page:
+    type: next_page
+    material: ARROW
+    displayName: "&aSonraki Sayfa"
+    slot: 53
+
+  back:
+    type: back
+    material: BARRIER
+    displayName: "&cGeri"
+    slot: 53
+  ban:
+    type: ban
+    material: ARROW
+    displayName: "&cOyuncu Banla"
+    slot: 49
+
+  bannedPlayers:
+    type: bannedPlayers
+    material: PLAYER_HEAD
+    displayName: "&e%player_name%"
+    lore:
+      - "&7Banlı oyuncu."
+      - ""
+      - "&7Banı Kaldırmak için tıkla."
+    slots: [10,11,12,13,14,15,16, 19,20,21,22,23,24,25, 28,29,30,31,32,33,34, 37,38,39,40,41,42,43]

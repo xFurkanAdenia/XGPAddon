@@ -1,0 +1,50 @@
+### types ###
+# ban
+# nextpage
+# previouspage
+# trusted-template
+# back
+
+
+title: "&a%claim_name% için Oyuncu Ayarları"
+size: 54
+items:
+  filler:
+    material: BLACK_STAINED_GLASS_PANE
+    displayName: "&r"
+    slots: [9,10,11,12,13,14,15,16,17]
+
+  ban_button:
+    type: ban
+    material: BARRIER
+    displayName: "&cOyuncuyu Yasakla"
+    lore:
+      - "&7Bu bölgeden oyuncuları yasakla."
+    slot: 4
+
+  trusted_player_template:
+    type: trusted-template
+    material: PLAYER_HEAD
+    displayName: "%trusted%"
+    lore:
+      - "&7Güvenilen oyuncu"
+      - "&eAyarlar için tıkla"
+    slots: [18,19,20,21,22,23,24,25,26, 27,28,29,30,31,32,33,34,35, 36,37,38,39,40,41,42,43,44]
+
+  previous_page:
+    type: previouspage
+    material: ARROW
+    displayName: "&c← Önceki Sayfa"
+    slot: 45
+
+  next_page:
+    type: nextpage
+    material: ARROW
+    displayName: "&aSonraki Sayfa →"
+    slot: 53
+
+  back:
+    material: BARRIER
+    displayName: "&cGeri Dön"
+    slot: 49
+    type: back

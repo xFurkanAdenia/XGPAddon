@@ -1,0 +1,96 @@
+true: "<color:#66FF00>✔</color>"
+false: "<color:#FF0000>✘</color>"
+
+menu-title: '<color:#FFD700>Main Menu</color>'
+
+
+claim-menu-title: '<color:#FFD700>Claim: %claim%</color>'
+
+title-claim-extend-time: '<color:#FFD700>Extend Claim Time</color>'
+subtitle-claim-extend-time: '<color:#FFD700>Type CANCEL to cancel</color>'
+
+claim-extend-time-chat:
+  - ""
+  - "<color:#FFD700>Enter the time you want to extend the claim</color>"
+  - "<color:#FFD700>Price for a minute: %price%</color>"
+  - ""
+
+claim-extend-time-success: '<color:#66FF00>Claim time extended by %time% minutes. Total time: %claim_time%</color>'
+claim-extend-time-fail: '<color:#FF0000>Claim time extension failed. You do not have enough money.</color>'
+
+claim-explosion-announce: '<color:#FFD700>%player%''s claim has exploded. | X: %claim_x% - Z: %claim_z% |</color>'
+
+invalid-number: '<color:#FF0000>Invalid number.</color>'
+
+config-reloaded: '<color:#66FF00>Config reloaded.</color>'
+
+
+ban-menu-ban-chat:
+  - ""
+  - "<color:#FFD700>Enter the name of the player to ban</color>"
+  - "<color:#FFD700>Type CANCEL to cancel</color>"
+  - ""
+
+trust-menu-trust-chat:
+  - ""
+  - "<color:#FFD700>Enter the name of the player to trust</color>"
+  - "<color:#FFD700>Type CANCEL to cancel</color>"
+  - ""
+
+claim-rename-chat:
+  - ""
+  - "<color:#FFD700>Enter the new name of the claim</color>"
+  - "<color:#FFD700>Type CANCEL to cancel</color>"
+  - ""
+
+claim-inspect-chat:
+  - ""
+  - "<color:#FFD700>Claim Remaining Time: %time%</color>"
+  - ""
+
+
+banned-from-claim: '<color:#FF0000>You have been banned from this claim.</color>'
+player-not-found: '<color:#FF0000>Player not found.</color>'
+player-is-owner: '<color:#FF0000>You are the owner of this claim.</color>'
+already-banned: '<color:#FF0000>This player is already banned.</color>'
+player-ban: '<color:#FF0000>Player %player% has been banned.</color>'
+player-unban: '<color:#66FF00>Player %player% has been unbanned.</color>'
+player-trust: '<color:#66FF00>Player %player% has been trusted.</color>'
+player-already-trusted: '<color:#ff0000>Player %player% already trusted.</color>'
+
+pvp-disabled: "<color:#ff0000>Pvp disabled in this claim!</color>"
+
+permission-block-break: "<color:#ff0000>You dont have permission to break block in this claim!</color>"
+permission-block-place: "<color:#ff0000>You dont have permission to place block in this claim!</color>"
+permission-open-chest: "<color:#ff0000>You dont have permission to open chest in this claim!</color>"
+permission-spawner-break: "<color:#ff0000>You dont have permission to break spawner in this claim!</color>"
+permission-open-door: "<color:#ff0000>You dont have permission to open door in this claim!</color>"
+permission-open-trap-door: "<color:#ff0000>You dont have permission to open trap door in this claim!</color>"
+
+no-claim-limit: "<color:#ff0000>You dont have enough limit for create claim!</color>"
+cant-claim-nearby: "<color:#ff0000>You cannot claim here because there is a claim within %radius% blocks.</color>"
+
+unowned-claim: "Unowned"
+unowned-claim-owner: ""
+unowned-claim-time: ""
+
+cant-enter-while-pvp: "<color:#FF0000>You cant enter claim while in pvp</color>"
+cant-damage-in-pvp-disabled-claim: "<color:#FF0000>You cant damage player while in pvp disabled claim!</color>"
+
+claim-exit-title: "%claim_name%"
+claim-exit-subtitle: "<color:#FF0000>Pvp enabled, be careful!</color>"
+
+claim-enter-pvp-enabled-title: "<color:#FFFFFF>%claim_name%</color>"
+claim-enter-pvp-enabled-subtitle: "<color:#FF0000>Pvp enabled, be careful!</color>"
+
+claim-enter-pvp-disabled-title: "%claim_name%"
+claim-enter-pvp-disabled-subtitle: "<color:#66ff00>Pvp disabled, you are safe!</color>"
+
+length-limit-exceeded: "<color:#FF0000>Claim name can Your new name can be maximum %maxlength% characters long.</color>"
+
+cant-use-setting-when-occupied: "<color:#FF0000>This setting cannot be changed while players are inside the claim!</color>"
+#<color:#ff0000></color>
+days: Days
+minutes: Minutes
+hours: Hours
+seconds: Seconds

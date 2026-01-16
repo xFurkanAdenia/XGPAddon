@@ -1,0 +1,19 @@
+name: XGPAddon
+version: '1.1.0-BETA'
+main: com.xfurkanadenia.xGPAddon.XGPAddon
+api-version: '1.16'
+authors: [ xFurkanAdenia ]
+
+commands:
+  claimlist:
+  xgpaddon:
+
+depend:
+  - GriefPrevention
+  - Vault
+
+softdepend:
+  - PlaceholderAPI
+  - LuckPerms
+  - DeluxeCombat
+  - CombatLogX
